@@ -1,0 +1,9 @@
+class ${1:`substitute(Filename(), '^.', '\u&', '')`} < DelegateClass(${2:ParentClass})
+	def initialize(${3:args})
+		super(${4:del_obj})
+
+		${5}
+	end
+
+
+end

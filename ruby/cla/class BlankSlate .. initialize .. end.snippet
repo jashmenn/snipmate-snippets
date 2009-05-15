@@ -1,0 +1,2 @@
+class ${1:BlankSlate}
+	instance_methods.each { |meth| undef_method(meth) unless meth =~ /\A__/ }

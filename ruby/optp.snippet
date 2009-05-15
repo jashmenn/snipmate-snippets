@@ -1,0 +1,6 @@
+require "optparse"
+
+options = {${1:default => "args"}}
+
+ARGV.options do |opts|
+	opts.banner = "Usage: #{File.basename($PROGRAM_NAME)}

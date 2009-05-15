@@ -1,0 +1,6 @@
+begin
+  ${1:# do stuff here}
+rescue Exception => e
+  puts "Exception: #{e.class}: #{e.message}\n\t#{e.backtrace.join("\n\t")}"
+  ${2:exit 1}
+end
