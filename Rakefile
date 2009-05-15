@@ -61,6 +61,8 @@ task :convert do
       # parse
       next if chunk.empty?
       lines = chunk.split(/\n/)
+      lines.pop if lines.size > 1 && lines.last =~ /^#\s/ # get rid of comment # hackish and ugly
+
       s = Snippet.new
       lines.shift.strip =~ /^([^\s]+)\s?(.*)$/
       s.trigger = $1 
