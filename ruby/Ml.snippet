@@ -1,1 +1,2 @@
-File.open(${1:dump_path}, "rb") { |${2:file}| Marshal.load(${3:$2}) }
+File.open(${1:"path/to/file.dump"}, "rb") { |${2:file}| Marshal.load($2) }${3}
+# deep_copy(..)
