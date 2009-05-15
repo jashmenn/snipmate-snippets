@@ -37,7 +37,7 @@ task :convert do
   raise "FILES required. Try rake convert FILES='~/.vim/snippets/*.snippets'" unless ENV['FILES']
 
   def write(filename, content)
-    FileUtils.mkdir(File.dirname(filename)) unless File.exists?(File.dirname(filename))
+    FileUtils.mkdir_p(File.dirname(filename)) unless File.exists?(File.dirname(filename))
     puts "writing #{filename}"
     File.open(filename, "w") { |f| f.print content }
   end
